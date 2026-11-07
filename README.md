@@ -47,8 +47,8 @@ ChurnGuard-AI/
 ### 1. Set Up the Environment
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ChurnGuard-AI.git
-cd ChurnGuard-AI
+git clone https://github.com/Aditi-gupta2/Customer-Churn-Prediction.git
+cd Customer-Churn-Prediction
 
 # Install dependencies
 pip install -r requirements.txt
