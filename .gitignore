@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+env/
+ENV/
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# System / OS
+.DS_Store
+Thumbs.db
+
+# Large model artifacts (optional, but keep under 50MB for Git)
+# Our models are small (~3.8MB), but standard caches should be ignored:
+.pytest_cache/
+.coverage
+htmlcov/
+

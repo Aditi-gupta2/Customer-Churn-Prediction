@@ -1,0 +1,143 @@
+{
+    "champion_model": "Gradient Boosting",
+    "models_performance": {
+        "Logistic Regression": {
+            "accuracy": 0.7417,
+            "precision": 0.5087,
+            "recall": 0.7834,
+            "f1_score": 0.6168,
+            "roc_auc": 0.842,
+            "confusion_matrix": [
+                [
+                    752,
+                    283
+                ],
+                [
+                    81,
+                    293
+                ]
+            ]
+        },
+        "Random Forest": {
+            "accuracy": 0.758,
+            "precision": 0.5307,
+            "recall": 0.762,
+            "f1_score": 0.6257,
+            "roc_auc": 0.8411,
+            "confusion_matrix": [
+                [
+                    783,
+                    252
+                ],
+                [
+                    89,
+                    285
+                ]
+            ]
+        },
+        "Gradient Boosting": {
+            "accuracy": 0.8034,
+            "precision": 0.6622,
+            "recall": 0.5294,
+            "f1_score": 0.5884,
+            "roc_auc": 0.844,
+            "confusion_matrix": [
+                [
+                    934,
+                    101
+                ],
+                [
+                    176,
+                    198
+                ]
+            ]
+        }
+    },
+    "feature_names": [
+        "SeniorCitizen",
+        "tenure",
+        "MonthlyCharges",
+        "TotalCharges",
+        "TotalServices",
+        "HasSecuritySupportBundle",
+        "IsMonthToMonth",
+        "IsAutoPayment",
+        "IsElectronicCheck",
+        "ChargePerService",
+        "gender_Male",
+        "Partner_Yes",
+        "Dependents_Yes",
+        "PhoneService_Yes",
+        "MultipleLines_No phone service",
+        "MultipleLines_Yes",
+        "InternetService_Fiber optic",
+        "InternetService_No",
+        "OnlineSecurity_No internet service",
+        "OnlineSecurity_Yes",
+        "OnlineBackup_No internet service",
+        "OnlineBackup_Yes",
+        "DeviceProtection_No internet service",
+        "DeviceProtection_Yes",
+        "TechSupport_No internet service",
+        "TechSupport_Yes",
+        "StreamingTV_No internet service",
+        "StreamingTV_Yes",
+        "StreamingMovies_No internet service",
+        "StreamingMovies_Yes",
+        "Contract_One year",
+        "Contract_Two year",
+        "PaperlessBilling_Yes",
+        "PaymentMethod_Credit card (automatic)",
+        "PaymentMethod_Electronic check",
+        "PaymentMethod_Mailed check"
+    ],
+    "numeric_cols": [
+        "tenure",
+        "MonthlyCharges",
+        "TotalCharges",
+        "TotalServices",
+        "ChargePerService"
+    ],
+    "top_features": [
+        {
+            "feature": "IsMonthToMonth",
+            "importance": 0.36821957096374874
+        },
+        {
+            "feature": "tenure",
+            "importance": 0.13508973679687455
+        },
+        {
+            "feature": "TotalCharges",
+            "importance": 0.10540008411000897
+        },
+        {
+            "feature": "InternetService_Fiber optic",
+            "importance": 0.09887060812816845
+        },
+        {
+            "feature": "MonthlyCharges",
+            "importance": 0.07542241491934631
+        },
+        {
+            "feature": "ChargePerService",
+            "importance": 0.05956226454682935
+        },
+        {
+            "feature": "IsElectronicCheck",
+            "importance": 0.021367165732671955
+        },
+        {
+            "feature": "PaperlessBilling_Yes",
+            "importance": 0.020480655102570928
+        },
+        {
+            "feature": "PaymentMethod_Electronic check",
+            "importance": 0.015693195792349065
+        },
+        {
+            "feature": "OnlineSecurity_Yes",
+            "importance": 0.009281556990732626
+        }
+    ]
+}
