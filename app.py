@@ -53,12 +53,22 @@ st.markdown("""
 
 @st.cache_resource
 def load_models_and_metadata():
-    model = joblib.load('models/churn_model.pkl')
-    rf_model = joblib.load('models/random_forest.pkl')
-    lr_model = joblib.load('models/logistic_regression.pkl')
-    scaler = joblib.load('models/scaler.pkl')
-    with open('models/model_metadata.json', 'r') as f:
-        meta = json.load(f)
+    try:
+        model = joblib.load('models/churn_model.pkl')
+        rf_model = joblib.load('models/random_forest.pkl')
+        lr_model = joblib.load('models/logistic_regression.pkl')
+        scaler = joblib.load('models/scaler.pkl')
+        with open('models/model_metadata.json', 'r') as f:
+            meta = json.load(f)
+    except Exception as e:
+        # Fallback: train freshly on Streamlit Cloud Python environment
+        from train_model import train_and_evaluate_models
+        meta = train_and_evaluate_models()
+        model = joblib.load('models/churn_model.pkl')
+        rf_model = joblib.load('models/random_forest.pkl')
+        lr_model = joblib.load('models/logistic_regression.pkl')
+        scaler = joblib.load('models/scaler.pkl')
+        
     return {
         'model': model,
         'rf_model': rf_model,
